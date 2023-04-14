@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> Calculator</title>
+    <style>
+        body{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            background-color:#ffffff;
+            outline: none;
+            font-family: sans-serif;
+        }
+        .container{
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background-color: #ffff;
+        }
+        .calculator{
+            background-color:#121111;
+            padding: 15px;
+            border-radius: 30px;
+            display: grid;
+            grid-template-columns: repeat(4,68px);
+        }
+        input{
+            grid-column: span 4;
+            height:70px;
+            width: 230px;
+            border: none;
+            border-radius: 35px;
+            color: rgb(12, 12, 3);
+            font-size: 50px;
+            text-align: end;
+            margin: auto;
+            margin-top: 40px;
+            margin-bottom: 30px;
+            padding: 20px;    
+            background-color: rgb(154, 156, 61);    
+        }
+        button{
+            height: 50px;
+            width: 50px;
+            background-color: rgba(70,70,70);
+            color: #ffffff;
+            border: none;
+            border-radius: 50%;
+            margin: 8px;
+            font-size: 16px;
+        }
+        .equal{
+            width: 114px;
+            border-radius: 41px;
+            background-color: #cf120c;
+            font-size: 35px;
+        }
+        .delete{
+            background-color: rgb(39, 101, 184);
+        }
+        .clear{
+            background-color: rgb(39, 101, 184);
+        }
+        .add{
+            background-color: rgb(231, 169, 56);
+            font-size: 20px;
+        }
+        .sub{
+            background-color: rgb(231, 169, 56);
+            font-size: 20px;
+        }
+        .mult
+        {   background-color: rgb(231, 169, 56);
+            font-size: 20px;
+            
+        }
+        .point{
+                background-color: rgb(231, 169, 56);
+                font-size: 20px;
+        }
+        .modulus
+        {   background-color: rgb(231, 169, 56);
+            font-size: 20px;    
+        }
+        .floor{
+                background-color: rgb(231, 169, 56);
+                font-size: 20px;
+        }
+        .delete:hover{
+            background-color: rgb(8, 0, 255) !important;
+        }
+        .clear:hover{
+            background-color: rgb(8, 0, 255);
+        }
+        .floor:hover{
+            background-color: rgb(255, 242, 0);
+            color: #121111;
+        }
+        .modulus:hover{
+            background-color: rgb(255, 242, 0);
+            color: #121111;
+        }
+        .point:hover{
+            background-color: rgb(255, 242, 0);
+            color: #121111;
+        }
+        .mult:hover{
+            background-color: rgb(255, 242, 0);
+            color: #121111;
+        }
+        .sub:hover{
+            background-color: rgb(255, 242, 0);
+            color: #121111;
+        }
+        .add:hover{
+            background-color: rgb(255, 242, 0);
+            color: #121111;
+        }
+        .seven:hover{
+            background-color: rgba(188, 187, 187, 0.871);
+        }
+        .equal:hover{
+            background-color: #ff0800;
+        }
+    </style>
+</head>
+<body >
+    <div class="container" >
+        <div class="calculator" id="calculator">
+            <input type="text" placeholder="0" id="Output-screen">
+            <button onclick="cl()" class="clear">Cl</button>
+            <button onclick="del()" class="delete">DEL</button>
+            <button onclick="display('%')" class="modulus">%</button>
+            <button onclick="display('/')" class="floor">/</button>
+            <button onclick="display('7')" class="seven">7</button>
+            <button onclick="display('8')" class="seven">8</button>
+            <button onclick="display('9')" class="seven">9</button>
+            <button onclick="display('*')" class="mult">*</button>
+            <button onclick="display('4')" class="seven">4</button>
+            <button onclick="display('5')" class="seven">5</button>
+            <button onclick="display('6')" class="seven">6</button>
+            <button onclick="display('-')" class="sub">-</button>
+            <button onclick="display('1')" class="seven">1</button>
+            <button onclick="display('2')" class="seven">2</button>
+            <button onclick="display('3')" class="seven">3</button>
+            <button onclick="display('+')" class="add">+</button>
+            <button onclick="display('.')" class="point">.</button>
+            <button onclick="display('0')" class="seven">0</button>
+            <button onclick="Calculate('=')" class="equal">=</button>
+        </div>
+    </div>
+
+    <script>
+        let outputscreen =document.getElementById('Output-screen');
+        function display(num){
+            outputscreen.value+=num;
+        }
+        function Calculate(){
+            try{
+                outputscreen.value=eval(outputscreen.value);
+            }
+            catch(err){
+                alert("invalid");
+            }
+        }
+        function cl(){
+            outputscreen.value = "";
+        }
+        function del(){
+            outputscreen.value=outputscreen.value.slice(0,-1);
+        }
+    </script>
+</body>
+</html>
