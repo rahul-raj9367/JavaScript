@@ -13,7 +13,9 @@ else{
         }
     }
 }
-console.log(n+" is a Prime Number ");
+if(flag==0){
+    console.log(n+" is a Prime Number ");
+}
 /*
 OUTPUT
 7 is a Prime Number 
