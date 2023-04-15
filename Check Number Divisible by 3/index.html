@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>check if a number is divisible by 3 </title>
+</head>
+<body>
+    <!-- Use the if/else statement to check if a number is divisible by 3 and alert "yes" or "no".-->
+    <script>
+        function display(a){
+            let n=a;
+            for(let i=3;i<n;i++){
+                if(n%i==0){
+                    alert(n+" is divisible by 3 ");
+                }
+                else{
+                    alert(n+" is Not divisible by 3 ");
+                }
+            }
+        }
+        
+    </script>
+    <button onclick="display(5)">To Check</button>
+</body>
+</html>
