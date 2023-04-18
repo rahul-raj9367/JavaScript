@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>10.Create a dropdown menu using the DOM</title>
+</head>
+<body>
+    <h1><center>9.Create a dropdown menu using the DOM</center></h1>
+
+    <select id="Dropdown">
+        <option value="option1">Option 1</option>
+        <option value="option2">Option 2</option>
+        <option value="option3">Option 3</option>
+    </select>
+      
+      
+    <script>
+        const dropdown = document.getElementById('Dropdown');
+            dropdown.addEventListener('change', function() {
+                const selectedOption = this.value;
+                console.log('Selected option:', selectedOption);
+        });
+
+    </script>
+
+</body>
+</html>

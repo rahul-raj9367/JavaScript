@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>3.Remove an existing element from the DOM</title>
+</head>
+<body>
+    <div id="mydiv">
+        <b>DIV</b>
+        Lorem ipsum dolor sit amet consectetur, adipisicing elit. Officia nesciunt eos veniam magnam commodi fugit blanditiis sequi, perferendis earum quos, ea repellendus ex necessitatibus? Assumenda laudantium doloribus quam quibusdam necessitatibus?
+    </div>
+    <p>Welcome To JavaScript</p>
+    <button id="btn">Remove Div</button>
+    <script>
+        var removeElement=document.getElementById('mydiv');
+        var btn=document.getElementById('btn');
+
+        btn.addEventListener('click',Removebtn)
+        function Removebtn(){
+            removeElement.remove();
+        }
+    </script>
+</body>
+</html>

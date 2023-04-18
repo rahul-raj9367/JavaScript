@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>8.Change the style of a DOM element</title>
+</head>
+<body>
+    <h1><center>8.Change the style of a DOM element</center></h1>
+
+    <h1 id="head" style="color: blue;">Heading Tag</h1>
+    <script>
+        const changestyle=document.getElementById('head');
+        changestyle.addEventListener('mouseover',()=>{
+            changestyle.style.color="red";
+        })
+    </script>
+</body>
+</html>

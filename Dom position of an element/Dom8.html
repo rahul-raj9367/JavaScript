@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>9.Find the position of an element on the page using the DOM</title>
+</head>
+<body>
+    <h1 id="myElement"><center>9.Find the position of an element on the page using the DOM</center></h1>
+
+    <script>
+        const element = document.getElementById('myElement');
+        const rect = element.getBoundingClientRect();
+        console.log('Element position:', rect.top, rect.right, rect.bottom, rect.left);
+    </script>
+</body>
+</html>

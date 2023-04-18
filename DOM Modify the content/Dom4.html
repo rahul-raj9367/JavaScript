@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>5.Modify the content of an existing HTML element</title>
+</head>
+<body>
+    <p id="para">Paragraph</p>
+
+    <h1 class="h1">Heading</h1>
+
+    <script>
+        const para= document.getElementById('para');
+        para.addEventListener('mouseover',()=>{
+            para.innerHTML="WELCOME TO HTML";
+        });
+        
+        const heading=document.querySelector('.h1');
+        heading.addEventListener('mouseover',()=>{
+            heading.textContent="WELCOME TO JAVASCRIPT";
+        });
+        
+    </script>
+</body>
+</html>

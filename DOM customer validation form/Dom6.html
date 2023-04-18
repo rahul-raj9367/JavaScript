@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>7.Create a customer validation form using the DOM</title>
+</head>
+<body>
+    <h1><center>7.Create a customer validation form using the DOM</center></h1>
+
+    <form id="customerForm">
+        <center>
+            <label for="firstName">First Name:</label>
+            <input type="text" id="firstName" name="firstName" required><br>
+            
+            <label for="lastName">Last Name:</label>
+            <input type="text" id="lastName" name="lastName" required><br>
+            
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" required><br>
+            
+            <label for="password">Password:</label>
+            <input type="password" id="password" name="password" required><br>
+            
+            <input type="submit" value="Submit">
+        </center>
+        
+      </form>
+      
+      <script>
+        const form = document.getElementById('customerForm');
+        
+        form.addEventListener('submit', (event) => {
+          
+          const firstName = document.getElementById('firstName').value;
+          const lastName = document.getElementById('lastName').value;
+          const email = document.getElementById('email').value;
+          const password = document.getElementById('password').value;
+          
+          if (!firstName || !lastName || !email || !password) {
+            alert('Please fill in all fields');
+          } else if (!isValidEmail(email)) {
+            alert('Please enter a valid email address');
+          } else if (password.length < 8) {
+            alert('Password must be at least 8 characters long');
+          } else {
+            alert('Form submitted successfully');
+            form.reset();
+          }
+        });
+        
+        function isValidEmail(email) {
+          const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+          return emailRegex.test(email);
+        }
+      </script>
+
+</body>
+</html>
