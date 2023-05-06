@@ -1,0 +1,12 @@
+.header  li{
+    display: flex;
+    
+    text-decoration: none ;
+}
+.heading{
+    margin: 100px;
+    color: blue;
+}
+.err{
+    color: red;
+}
