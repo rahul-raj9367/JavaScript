@@ -2,7 +2,7 @@
 const express=require('express');
 const app=express();
 const customRouter=require('./Routes');
-app.use('/',customRouter);
+app.use('/',customRouter);//middleware
 
 
 app.listen(3000,()=>{
